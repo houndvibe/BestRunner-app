@@ -1,15 +1,17 @@
 import "./App.css";
-import { Route, Switch } from "react-router-dom";
 import Nav from "./components/Nav/Nav";
 import Container from "./components/container/Container";
 import WorkoutsPage from "./components/WorkoutsPage/WorkoutsPage";
 import InfoPage from "./components/InfoPage/InfoPage";
+import { Route, Switch } from "react-router-dom";
+import { connect } from "react-redux";
+import { ON_ADD, ON_SUB } from "./store/actions";
 
-function App() {
+function App(props) {
   let routes = (
     <Switch>
-      <Route path="/" exact component={WorkoutsPage} />
-      <Route path="/info" component={InfoPage} />
+      <Route path="/" exact render={() => <WorkoutsPage></WorkoutsPage>} />
+      <Route path="/info" render={() => <InfoPage data={props}></InfoPage>} />
     </Switch>
   );
 
@@ -21,4 +23,17 @@ function App() {
   );
 }
 
-export default App;
+function mapStateToProps(state) {
+  return {
+    counter: state.counter,
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    onAdd: () => dispatch(ON_ADD),
+    onSub: () => dispatch(ON_SUB),
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

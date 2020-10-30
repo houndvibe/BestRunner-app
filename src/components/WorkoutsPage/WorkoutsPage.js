@@ -5,6 +5,7 @@ function WorkoutsPage(props) {
   return (
     <div className="WorkoutPage">
       <div className="Toolbar"></div>
+      <div></div>
     </div>
   );
 }
