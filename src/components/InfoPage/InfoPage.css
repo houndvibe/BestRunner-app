@@ -1,0 +1,44 @@
+.InfoPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background: rgb(63, 245, 251);
+  background: linear-gradient(
+    90deg,
+    rgba(63, 245, 251, 0.7861519607843137) 20%,
+    rgba(66, 248, 199, 1) 36%,
+    rgba(70, 252, 120, 0.8281687675070029) 60%
+  );
+}
+.Content {
+  background: rgba(128, 128, 128, 0.219);
+  border: 1px solid rgba(0, 0, 0, 0.048);
+  border-radius: 10px;
+  padding: 50px;
+  margin-bottom: 70px;
+  transition: 1s;
+}
+.ContentLine {
+  padding: 5px;
+}
+.Content:hover {
+  padding: 100px;
+}
+.Line1 {
+  font-size: 50px;
+  font-weight: bold;
+}
+.Line3 {
+  font-size: 20px;
+  font-weight: bold;
+}
+.LineHref {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+}
+.LineHref:hover {
+  border-bottom: none;
+  border-bottom: 1px solid black;
+}

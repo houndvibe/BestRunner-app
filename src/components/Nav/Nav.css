@@ -1,0 +1,28 @@
+.Nav {
+  display: flex;
+  width: 100vw;
+  height: 11vh;
+  background: black;
+  color: white;
+  align-items: baseline;
+  font-family: "Montserrat", sans-serif;
+}
+
+.NavItem {
+  margin: 10px;
+}
+
+.NavLink {
+  font-size: 30px;
+  text-decoration: none;
+  color: white;
+}
+
+.NavLink:hover {
+  border-bottom: 1px solid white;
+}
+
+.left {
+  font-size: 40px;
+  font-weight: bold;
+}

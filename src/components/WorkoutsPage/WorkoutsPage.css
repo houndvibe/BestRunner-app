@@ -1,0 +1,19 @@
+.WorkoutPage {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: rgb(63, 245, 251);
+  background: linear-gradient(
+    90deg,
+    rgba(63, 245, 251, 0.7861519607843137) 36%,
+    rgba(70, 252, 120, 0.8281687675070029) 76%
+  );
+}
+
+.Toolbar {
+  width: 100vw;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.349);
+  /* border-radius: 0px 0px 20px 20px; */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.192);
+}
