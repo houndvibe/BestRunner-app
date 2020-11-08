@@ -8,7 +8,7 @@ for Aspirity
 
 ---Back-end: Firebase real-time database.
 
----To run locally:
+TO RUN LOCALLY ON YOUR COMPUTER:
 
  -->go to terminal 
  
