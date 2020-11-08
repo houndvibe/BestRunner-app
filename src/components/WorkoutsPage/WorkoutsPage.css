@@ -1,5 +1,6 @@
 .WorkoutPage {
   display: flex;
+  align-items: center;
   flex-direction: column;
   height: 100%;
   background: rgb(63, 245, 251);
@@ -9,11 +10,50 @@
     rgba(70, 252, 120, 0.8281687675070029) 76%
   );
 }
-
 .Toolbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100vw;
-  height: 50px;
+  padding: 6px;
   background: rgba(255, 255, 255, 0.349);
-  /* border-radius: 0px 0px 20px 20px; */
   border-bottom: 1px solid rgba(0, 0, 0, 0.192);
+}
+.Toolbar__Filter {
+  font-size: 30px;
+}
+.Toolbar__Filter__Select {
+  font-size: 20px;
+}
+.Toolbar__Button {
+  margin-left: 80px;
+  width: 200px;
+  font-size: 20px;
+}
+.Toolbar__Button:hover,
+.Toolbar__Filter__Select:hover {
+  background: rgba(75, 177, 35, 0.479);
+  box-shadow: 1px 1px 1px;
+}
+.Toolbar__Button:active,
+.Toolbar__Filter__Select:hover {
+  background: rgba(75, 177, 35, 0.055);
+}
+
+.Toolbar__UI {
+  height: 42px;
+  background: rgba(255, 255, 255, 0.473);
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.26);
+  border-radius: 4px;
+  padding: 4px;
+}
+
+.Table__Container {
+  overflow-x: scroll;
+  overflow-y: scroll;
+  max-height: 520px;
+  background: rgba(0, 0, 0, 0.096);
+  border-radius: 10px;
+  margin-top: 10px;
 }

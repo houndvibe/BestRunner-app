@@ -1,0 +1,11 @@
+export const ON_SORT = "ON_SORT";
+export const ON_FILTER = "ON_FILTER";
+export const ON_TYPE_CHANGE = "ON_TYPE_CHANGE";
+export const ON_COMMENT_CHANGE = "ON_COMMENT_CHANGE";
+export const ON_DISTANCE_CHANGE = "ON_DISTANCE_CHANGE";
+export const ON_DATE_CHANGE = "ON_DATE_CHANGE";
+export const ON_WORKOUT_ADD = "ON_WORKOUT_ADD";
+export const ON_ROW_MOUSE_ENTER = "ON_ROW_MOUSE_ENTER";
+export const ON_ROW_MOUSE_LEAVE = "ON_ROW_MOUSE_LEAVE";
+export const ON_DELETE_HANDLER = "ON_DELETE_HANDLER";
+export const ON_SET = "ON_SET";

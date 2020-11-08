@@ -1,0 +1,156 @@
+.WorkoutsTable {
+  width: 90vw;
+  margin: 10px;
+  background: rgba(255, 255, 255, 0.541);
+  border-radius: 8px;
+  border-collapse: separate;
+}
+/* Table Head styles */
+
+.WorkoutsTable__Head {
+  background: rgba(255, 255, 255, 0.356);
+  cursor: pointer;
+}
+.WorkoutsTable__Head td {
+  text-align: center;
+}
+.WorkoutsTable__Head td:hover {
+  background: rgba(255, 255, 255, 0.42);
+}
+
+/* Index head cell */
+.WorkoutsTable__Head__IndexCell {
+  font-size: 20px;
+  text-align: center;
+}
+
+/* Date head cell */
+.WorkoutsTable__Head__DateCell {
+  width: 25%;
+}
+
+/* Type head cell */
+.WorkoutsTable__Head__TypeCell {
+  width: 15%;
+}
+
+/* Distance head cell */
+.WorkoutsTable__Head__DistanceCell {
+  width: 5%;
+}
+
+/* Comment head cell */
+.WorkoutsTable__Head__CommentCell {
+  width: 45%;
+}
+
+/* Table rows color attributes */
+.walking {
+  background: rgba(162, 23, 218, 0.3);
+}
+.swimming {
+  background: rgba(93, 127, 221, 0.3);
+}
+.running {
+  background: rgba(123, 221, 93, 0.3);
+}
+.cycle {
+  background: rgba(243, 81, 203, 0.3);
+}
+
+/* Table body styles */
+.WorkoutsTable__Body__Loadscrin {
+  display: flex;
+  font-size: 40px;
+}
+
+/* Index body cells */
+.WorkoutsTable__Body__IndexCell {
+  font-size: 20px;
+  text-align: center;
+}
+.WorkoutsTable__Body__IndexCell_BacketButton {
+  width: 25px;
+  height: 25px;
+  transition: 0.2s ease-in-out;
+}
+.WorkoutsTable__Body__IndexCell_BacketButton:hover {
+  width: 35px;
+  height: 35px;
+}
+
+/* Date body cells */
+.WorkoutsTable__Body__DateCell {
+  display: flex;
+}
+.WorkoutsTable__Body__DateCell select {
+  text-align: center;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  height: 50px;
+  width: 80px;
+  border-radius: 4px;
+}
+.WorkoutsTable__Body__DateCell select:hover {
+  background: rgba(0, 0, 0, 0.075);
+}
+
+/* Type body cells */
+.WorkoutsTable__Body__TypeCell {
+  background: rgba(255, 255, 255, 0);
+  font-size: 20px;
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 4px;
+}
+.WorkoutsTable__Body__TypeCell:hover {
+  background: rgba(0, 0, 0, 0.075);
+}
+
+/* Distance body cells */
+.WorkoutsTable__Body__DistanceCell input {
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  width: 100%;
+  height: 50px;
+  border-radius: 4px;
+}
+.WorkoutsTable__Body__DistanceCell input:hover {
+  background: rgba(0, 0, 0, 0.075);
+}
+
+/* Comment body cells */
+.WorkoutsTable__Body__CommentCell textarea {
+  background: rgba(255, 255, 255, 0.192);
+  border: none;
+  outline: none;
+  font-size: 19px;
+  width: 100%;
+  min-height: 50px;
+  max-height: 100px;
+  min-width: 500px;
+  max-width: 500px;
+}
+.WorkoutsTable__Body__CommentCell textarea:hover {
+  background: rgba(0, 0, 0, 0.075);
+}
+
+/* Other */
+tr:hover {
+  background: rgba(255, 255, 255, 0.356);
+}
+tr:focus {
+  outline: none;
+}
+td {
+  border-radius: 8px;
+  padding: 12px;
+}
+select {
+  cursor: pointer;
+}
