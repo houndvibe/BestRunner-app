@@ -52,8 +52,17 @@
 .Table__Container {
   overflow-x: scroll;
   overflow-y: scroll;
-  max-height: 520px;
+  max-height: 78vh;
   background: rgba(0, 0, 0, 0.096);
   border-radius: 10px;
   margin-top: 10px;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.Table__Container::-webkit-scrollbar {
+  display: none;
+}
+.Table__Container {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
