@@ -8,8 +8,8 @@ import { Route, Switch } from "react-router-dom";
 function App() {
   let routes = (
     <Switch>
-      <Route path="/" exact render={() => <InfoPage></InfoPage>} />
-      <Route path="/workouts" render={() => <WorkoutsPage></WorkoutsPage>} />
+      <Route path="/" exact component={InfoPage} />
+      <Route path="/workouts" component={WorkoutsPage} />
     </Switch>
   );
 
