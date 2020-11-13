@@ -1,4 +1,5 @@
 import React from "react";
+
 import "./WorkoutsTable.css";
 
 //timeConverter приобразовывает таймстамп в значение года/месяца/даты
@@ -15,6 +16,28 @@ function timeConverter(timestamp) {
 }
 
 function WorkoutsTable(props) {
+  const yearOptions = ["2017", "2018", "2019", "2020", "2021"];
+  const monthOptions = [
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+    "Jan",
+  ];
+  let daysOptions = [];
+  let daydInCurrentMont = 31;
+
+  for (let i = 1; i <= daydInCurrentMont; i++) {
+    daysOptions.push(`${i}`);
+  }
+
   return (
     <table className="WorkoutsTable">
       <thead className="WorkoutsTable__Head">
@@ -76,76 +99,51 @@ function WorkoutsTable(props) {
               </td>
               <td className="WorkoutsTable__Body__DateCell">
                 <select
+                  //Селектор даты
                   value={timeConverter(workout.wDate).date}
                   onChange={(event) =>
                     props.onDateChange(event.target.value, index, "date")
                   }
                 >
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                  <option value="7">7</option>
-                  <option value="8">8</option>
-                  <option value="9">9</option>
-                  <option value="10">10</option>
-                  <option value="11">11</option>
-                  <option value="12">12</option>
-                  <option value="13">13</option>
-                  <option value="14">14</option>
-                  <option value="15">15</option>
-                  <option value="16">16</option>
-                  <option value="17">17</option>
-                  <option value="18">18</option>
-                  <option value="19">19</option>
-                  <option value="20">20</option>
-                  <option value="21">21</option>
-                  <option value="22">22</option>
-                  <option value="23">23</option>
-                  <option value="24">24</option>
-                  <option value="25">25</option>
-                  <option value="26">26</option>
-                  <option value="27">27</option>
-                  <option value="28">28</option>
-                  <option value="29">29</option>
-                  <option value="30">30</option>
-                  <option value="31">31</option>
+                  {daysOptions.map((day, index) => {
+                    return (
+                      <option key={index} value={`${day}`}>
+                        {day}
+                      </option>
+                    );
+                  })}
                 </select>
 
                 <select
+                  //Селектор месяца
                   value={timeConverter(workout.wDate).month}
                   onChange={(event) =>
                     props.onDateChange(event.target.value, index, "month")
                   }
                 >
-                  <option value="1">Feb</option>
-                  <option value="2">Mar</option>
-                  <option value="3">Apr</option>
-                  <option value="4">May</option>
-                  <option value="5">Jun</option>
-                  <option value="6">Jul</option>
-                  <option value="7">Aug</option>
-                  <option value="8">Sep</option>
-                  <option value="9">Oct</option>
-                  <option value="10">Nov</option>
-                  <option value="11">Dec</option>
-                  <option value="0">Jan</option>
+                  {monthOptions.map((month, index) => {
+                    return (
+                      <option key={index} value={`${index}`}>
+                        {month}
+                      </option>
+                    );
+                  })}
                 </select>
 
                 <select
+                  //Селектор года
                   value={timeConverter(workout.wDate).year}
                   onChange={(event) =>
                     props.onDateChange(event.target.value, index, "year")
                   }
                 >
-                  <option value="2015">2015</option>
-                  <option value="2016">2016</option>
-                  <option value="2017">2017</option>
-                  <option value="2018">2018</option>
-                  <option value="2019">2019</option>
-                  <option value="2020">2020</option>
+                  {yearOptions.map((year, index) => {
+                    return (
+                      <option key={index} value={`${year}`}>
+                        {year}
+                      </option>
+                    );
+                  })}
                 </select>
               </td>
               <td>
