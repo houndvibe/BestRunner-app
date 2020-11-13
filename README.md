@@ -7,7 +7,7 @@ for Aspirity
 ---Front-end: React v17.0.1 /Redux v4.0.5 /ReduxThunk.
 
 ---Back-end: Firebase real-time database.
-<<<<<<< HEAD
+
 =======
 
 TO RUN LOCALLY ON YOUR COMPUTER:
