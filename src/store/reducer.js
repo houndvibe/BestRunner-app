@@ -89,6 +89,7 @@ export default function reducer(state = initialState, action) {
       let date = new Date(
         +newDateState.workoutsList[action.payload2].wDate * 1000
       );
+
       //обновляем  необходимый элемент даты
       switch (action.payload3) {
         case "date":

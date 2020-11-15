@@ -18,6 +18,7 @@ function timeConverter(timestamp) {
 function WorkoutsTable(props) {
   const yearOptions = ["2017", "2018", "2019", "2020", "2021"];
   const monthOptions = [
+    "Jan",
     "Feb",
     "Mar",
     "Apr",
@@ -29,15 +30,7 @@ function WorkoutsTable(props) {
     "Oct",
     "Nov",
     "Dec",
-    "Jan",
   ];
-  let daysOptions = [];
-  let daydInCurrentMont = 31;
-
-  for (let i = 1; i <= daydInCurrentMont; i++) {
-    daysOptions.push(`${i}`);
-  }
-
   return (
     <table className="WorkoutsTable">
       <thead className="WorkoutsTable__Head">
@@ -76,6 +69,19 @@ function WorkoutsTable(props) {
       </thead>
       <tbody className="WorkoutsTable__Body">
         {props.workoutsList.map((workout, index) => {
+          //Вычисляем количество дней в месяце
+          let date = new Date(workout.wDate * 1000);
+          let date2 = new Date(workout.wDate * 1000);
+          date.setMonth(date.getMonth() + 1);
+
+          let daysInCurrentMonth =
+            (date.getTime() - date2.getTime()) / 1000 / 60 / 60 / 24;
+          let daysOptions = [];
+
+          for (let i = 1; i <= daysInCurrentMonth; i++) {
+            daysOptions.push(`${i}`);
+          }
+
           return props.filterBy === workout.wType ||
             props.filterBy === "disabled" ? (
             <tr
