@@ -85,7 +85,7 @@ function WorkoutsTable(props) {
           return props.filterBy === workout.wType ||
             props.filterBy === "disabled" ? (
             <tr
-              key={index}
+              key={Math.random()}
               className={workout.wType}
               tabIndex="0"
               onMouseEnter={() => props.onRowMouseEnter(index)}
@@ -111,9 +111,9 @@ function WorkoutsTable(props) {
                     props.onDateChange(event.target.value, index, "date")
                   }
                 >
-                  {daysOptions.map((day, index) => {
+                  {daysOptions.map((day) => {
                     return (
-                      <option key={index} value={`${day}`}>
+                      <option key={Math.random()} value={`${day}`}>
                         {day}
                       </option>
                     );
@@ -129,7 +129,7 @@ function WorkoutsTable(props) {
                 >
                   {monthOptions.map((month, index) => {
                     return (
-                      <option key={index} value={`${index}`}>
+                      <option key={Math.random()} value={`${index}`}>
                         {month}
                       </option>
                     );
@@ -143,9 +143,9 @@ function WorkoutsTable(props) {
                     props.onDateChange(event.target.value, index, "year")
                   }
                 >
-                  {yearOptions.map((year, index) => {
+                  {yearOptions.map((year) => {
                     return (
-                      <option key={index} value={`${year}`}>
+                      <option key={Math.random()} value={`${year}`}>
                         {year}
                       </option>
                     );
