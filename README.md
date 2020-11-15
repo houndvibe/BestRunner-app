@@ -17,5 +17,3 @@ TO RUN LOCALLY ON YOUR COMPUTER:
 -->type npm install(to install dependencies)
 
 -->type npm start
-
-> > > > > > > a5d938b298a87b67dd721af6ac1f9a38531c933b
