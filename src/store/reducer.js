@@ -120,6 +120,7 @@ export default function reducer(state = initialState, action) {
           wDate: Date.now() / 1000,
           wDistance: 0,
           wComment: "...",
+          wId: +state.workoutsList.length,
         }),
       };
     //ON_ROW_MOUSE_ENTER и ON_ROW_MOUSE_LEAVE нужны для отображения кнопки удаления

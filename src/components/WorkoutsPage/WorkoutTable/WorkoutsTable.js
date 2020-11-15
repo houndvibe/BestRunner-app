@@ -85,7 +85,7 @@ function WorkoutsTable(props) {
           return props.filterBy === workout.wType ||
             props.filterBy === "disabled" ? (
             <tr
-              key={Math.random()}
+              key={workout.wId}
               className={workout.wType}
               tabIndex="0"
               onMouseEnter={() => props.onRowMouseEnter(index)}
